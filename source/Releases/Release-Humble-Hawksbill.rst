@@ -473,6 +473,16 @@ Thus, this is a breaking change for downstream uses of ``NodeBaseInterface`` and
 
 See `ros2/rclcpp#1612 <https://github.com/ros2/rclcpp/pull/1612>`__ for more details.
 
+rclcpp_lifecycle
+^^^^^^^^^^^^^^^^
+
+Active and deactivate transitions of publishers will be triggered automatically
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Before, users needed to override ``LifecylceNode::on_activate()`` and ``LifecylceNode::on_deactivate()`` and call the similarly named methods on ``LifecyclePublisher`` to make the transition actually happen.
+Now, ``LifecylceNode`` provides a default interface of these methods that already do this.
+See the implementation of the ``lifecycle_talker`` node `here <https://github.com/ros2/demos/tree/humble/lifecycle>`__.
+
 rclpy
 ^^^^^
 
