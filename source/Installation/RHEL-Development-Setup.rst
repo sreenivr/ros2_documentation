@@ -91,7 +91,11 @@ Install dependencies using rosdep
 
    sudo rosdep init
    rosdep update
+<<<<<<< HEAD
    rosdep install --from-paths src --ignore-src -y --skip-keys "fastcdr rti-connext-dds-5.3.1 urdfdom_headers pydocstyle python3-mypy python3-babeltrace python3-lttng asio"
+=======
+   rosdep install --from-paths src --ignore-src -y --skip-keys "asio cyclonedds fastcdr fastrtps ignition-cmake2 ignition-math6 liborocos-kdl-dev python3-babeltrace python3-mypy python3-pykdl rti-connext-dds-6.0.1 urdfdom_headers"
+>>>>>>> 62be1f6 (Update rosdep key skip list for RHEL (#2481))
 
 Install additional DDS implementations (optional)
 -------------------------------------------------
